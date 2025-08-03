@@ -9,7 +9,7 @@ export const useSocket = ()=>{
     return socket
 }
 const SocketProvider = (props) => {
-    const socket = useMemo(()=>io('http://localhost:8000'), [])
+    const socket = useMemo(()=>io('https://facetoface-backend.onrender.com'), [])
   return (
     <socketContext.Provider value={socket}>
         {props.children}
